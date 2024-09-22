@@ -1,0 +1,167 @@
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            transition: transform 0.3s;
+        }
+
+        form:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .output {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            height: auto;
+            margin-left: 20px;
+        }
+
+        .output h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .output p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form id="registrationForm">
+            <h2>Registration Form</h2>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group gender-group">
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <select id="education" name="education">
+                    <option value="diploma">Diploma</option>
+                    <option value="bachelor">Bachelor's</option>
+                    <option value="master">Master's</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+
+            <div class="form-group language-group">
+                <label>Language Skills:</label>
+                <label><input type="checkbox" name="language" value="english"> English</label>
+                <label><input type="checkbox" name="language" value="dari"> Dari</label>
+                <label><input type="checkbox" name="language" value="pashto"> Pashto</label>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="output" id="outputDisplay">
+            <h3>Entered Information</h3>
+            <p><strong>Name:</strong> <span id="outputName"></span></p>
+            <p><strong>Last Name:</strong> <span id="outputLastname"></span></p>
+            <p><strong>Username:</strong> <span id="outputUsername"></span></p>
+            <p><strong>Gender:</strong> <span id="outputGender"></span></p>
+            <p><strong>Education:</strong> <span id="outputEducation"></span></p>
+            <p><strong>Language Skills:</strong> <span id="outputLanguages"></span></p>
+        </div>
+    </div>
+
+</body>
+</html>
